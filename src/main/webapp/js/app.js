@@ -923,7 +923,7 @@ json.links.forEach(function(d) {
     	d3.select(this)
     		.style("stroke-width", "5px")
     		.style("stroke", "green");
-    	overall_anlys(all_obj,d.source.index,d.target.index);
+    	//overall_anlys(all_obj,d.source.index,d.target.index);
     }
         
     function mOut(d){
