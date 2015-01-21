@@ -141,7 +141,7 @@ select {
 					<div class="col-lg-12">
 						<h1 class="page-header">Data-Analysis</h1>
 						<ol class="breadcrumb">
-							<li><i class="fa fa-dashboard"></i> <a href="template.html">Visualizer</a>
+							<li><i class="fa fa-dashboard"></i> <a href="index.jsp">Visualizer</a>
 							</li>
 							<li class="active"><i class="fa fa-table"></i> Data-Analysis
 							</li>
