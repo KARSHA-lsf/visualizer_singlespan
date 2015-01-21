@@ -21,6 +21,7 @@
 <script src="js/function.js"></script>
 <script src="js/node.js"></script>
 <script src="js/app.js"></script>
+<script src="js/tracepaths.js"></script>
 
 <style type="text/css">
 .demoHeaders {
@@ -158,6 +159,7 @@ text {
 							<li><a id="Incmp" href="#IncompleteTriad" data-toggle="tab">IncompleteTriad</a></li>
 							<li><a id="Imcycles" href="#ImmediateCycle" data-toggle="tab">ImmediateCycles</a></li>
 							<li><a id="Chain" href="#Chain_show" data-toggle="tab">Chain</a></li>
+							<li><a id="traces"  href="#tracepath" data-toggle="tab" >Trace Path</a></li>
 							
 							
 						</ul>
@@ -427,6 +429,21 @@ text {
 								</div>
 							</div>
 							
+							<!-- Trace paths -->
+							   	<div class="tab-pane fade" id="tracepath">						   	
+							   		<div id="tpath" style="border:2px solid;">
+							   		<div><b>Note: </b> Click the initial node and mouseover the realted nodes to see all connected nodes. Click mouseovered node to trace the path. Double click the nodes to remove the trace.
+							   		You can see the traced history by clicking previous node. Green edges indicates the traced path. 
+							   		</div>
+							   			<script>
+							   			$("#traces").click(function(){
+							   				var width = 900, height = 950;											
+											TracePaths(nodes, file, "#tpath", width, height);
+							   			});
+							   			
+							   			</script>						   		
+							   		</div>
+							   	</div>	
 							
 						</div>
 						<script>							
