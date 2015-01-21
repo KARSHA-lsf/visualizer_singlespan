@@ -1,20 +1,20 @@
 function allData_histogram(pos,file,axistxt) {
 	var margin = {
-			top : 20,
-			right : 20,
-			bottom : 30,
+			top : 10,
+			right : 10,
+			bottom : 25,
 			left : 40
-		}, width = 960 - margin.left - margin.right, height = 400 - margin.top
+		}, width = 480 - margin.left - margin.right, height = 200 - margin.top
 				- margin.bottom;
 
-		var x0 = d3.scale.ordinal().rangeRoundBands([ 0, width - 60 ], .1);
+	var x0 = d3.scale.ordinal().rangeRoundBands([ 0, width - 60 ], .1);
 
-		var x1 = d3.scale.ordinal();
+	var x1 = d3.scale.ordinal();
 
-		var y = d3.scale.linear().range([ height, 0 ]);
+	var y = d3.scale.linear().range([ height, 0 ]);
 
 		var color = d3.scale.ordinal().range(
-				[ "#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56" ]);
+				[ "#a05d56","#a05d56", "#8a89a6", "#7b6888", "#6b486b" ]);
 
 		var xAxis = d3.svg.axis().scale(x0).orient("bottom");
 

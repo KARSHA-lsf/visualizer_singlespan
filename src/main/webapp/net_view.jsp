@@ -144,8 +144,8 @@ text {
 					<div class="col-lg-12">
 						<h2>
 							<center>
-								Granger causality Log Volume Data Analysis
-								<%= year%> - Quarter : <%=Integer.parseInt(request.getParameter("Q"))%></center>
+								2005-2012 Whole Set Granger Causality Enhanced Daily/Weekly
+							</center>
 						</h2>
 
 						<ul id="myTab" class="nav nav-tabs">
@@ -153,8 +153,8 @@ text {
 								onclick="window.location.reload(true);" data-toggle="tab">
 									Network</a></li>
 
-							<li><a id="In" href="#indegree" data-toggle="tab">Indegree</a></li>
-							<li><a id="Out" href="#outdegree" data-toggle="tab">Outdegree</a></li>
+							<li><a id="In" href="#indegree" data-toggle="tab">Max Indegree</a></li>
+							<li><a id="Out" href="#outdegree" data-toggle="tab">Max Outdegree</a></li>
 							<li><a id="Cmp" href="#completeTriad" data-toggle="tab">CompleteTriad</a></li>
 							<li><a id="Incmp" href="#IncompleteTriad" data-toggle="tab">IncompleteTriad</a></li>
 							<li><a id="Imcycles" href="#ImmediateCycle" data-toggle="tab">ImmediateCycles</a></li>

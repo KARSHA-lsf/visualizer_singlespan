@@ -122,8 +122,8 @@ select {
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				 <ul class="nav navbar-nav side-nav">
                         <li class="active"><a href="index.jsp"><i class="fa fa-fw fa-dashboard"></i> Karsha Visualizer</a></li>
-                        <li><a href="net_view.jsp?filename=data2005.json&year=2005&Q=5"><i class="fa fa-fw fa-table"></i> Daily </a></li>           
-						<li><a href="net_view.jsp?filename=data2005.json&year=2005&Q=5"><i class="fa fa-fw fa-table"></i> Weekly </a></li>     
+                        <li><a href="net_view.jsp?filename=daily.json&year=2005&Q=5"><i class="fa fa-fw fa-table"></i> Daily </a></li>           
+						<li><a href="net_view.jsp?filename=weekly.json&year=2005&Q=5"><i class="fa fa-fw fa-table"></i> Weekly </a></li>     
                         <li><a href="DataAnalysis.jsp"><i class="fa fa-fw fa-table"></i>Data-Analysis</a></li>
                         <li><a href=""><i class="fa fa-fw fa-file"></i>More About</a></li>
 
@@ -151,11 +151,11 @@ select {
 				<!-- /.row -->
 
 				<div class="row">
-					<div class="col-lg-12">
-
-						<div id="cc_data" style="border: 2px solid;">
+					
+						<div class="col-lg-6" style="border: 2px solid;">
+						<div id="cc_data" >
 							<center>
-								<h2>Clustering Coefficient Analysis - Log Volume Data</h2>
+								<h3>Clustering Coefficient Analysis</h3>
 							</center>
 							<script type="text/javascript">
 								allData_histogram("#cc_data",
@@ -163,64 +163,34 @@ select {
 							</script>
 						</div>
 					</div>
-				</div>
-				<br></br>
-				<div class="row">
-					<div class="col-lg-6" style="border: 2px solid;">
-						<div id="year_edge_data">
-							<center>
-								<h4>GC edges occurrence count annually</h4>
-							</center>
-							<script type="text/javascript">
-								year_edge_histogrm("#year_edge_data",
-										"csv/year_edge_analysis.csv");
-							</script>
-						</div>
-					</div>
 					<div class="col-rg-6" style="border: 2px solid;">
-						<div id="quater_edge_data">
+						<div id="edge_data1">
 							<center>
-								<h4>GC edges occurrence count in quarterly</h4>
+								<h3>Edges Analysis</h3>
 							</center>
 							<script type="text/javascript">
-								year_edge_histogrm("#quater_edge_data",
-										"csv/quater_edge_analysis.csv");
+								allData_histogram("#edge_data1","csv/edges_overall_data.csv","Number of edges");
 							</script>
 						</div>
-					</div>
+					</div>					
 				</div>
+				
 				<br></br>
 				<div class="row">
-					<div class="col-lg-12">
-						<div id="edge_data" style="border: 2px solid;">
+					<div class="col-lg-6">
+						<div id="com_triad_data" >
 							<center>
-								<h2>Edges Analysis - Log Volume Data</h2>
-							</center>
-							<script type="text/javascript">
-								allData_histogram("#edge_data","csv/edges_overall_data.csv","Number of edges");
-							</script>
-						</div>
-					</div>
-				</div>
-				<br></br>
-				<div class="row">
-					<div class="col-lg-12">
-						<div id="com_triad_data" style="border: 2px solid;">
-							<center>
-								<h2>Complete triad Analysis - Log Volume Data</h2>
+								<h3>Complete triad Analysis</h3>
 							</center>
 							<script type="text/javascript">
 								allData_histogram("#com_triad_data","csv/comTraid_overall_data.csv","Number of Complete triads");
 							</script>
 						</div>
 					</div>
-				</div>
-				<br></br>
-				<div class="row">
-					<div class="col-lg-12">
+					<div class="col-rg-6">
 						<div id="Incom_triad_data" style="border: 2px solid;">
 							<center>
-								<h2>Incomplete triad Analysis - Log Volume Data</h2>
+								<h3>Incomplete triad Analysis</h3>
 							</center>
 							<script type="text/javascript">
 								allData_histogram("#Incom_triad_data","csv/IncomTraid_overall_data.csv","Number of Incomplete triads");
@@ -229,18 +199,6 @@ select {
 					</div>
 				</div>
 				<br></br>
-				<div class="row">
-					<div class="col-lg-12">
-						<div id="repeat_cmp_triad" style="border: 2px solid;">
-							<center>
-								<h2>Repeated Completed Triad Analysis - Log Volume Data</h2>
-							</center>
-							<script type="text/javascript">
-								repeatCmpTriad("#repeat_cmp_triad", "csv/repeat.csv");
-							</script>
-						</div>
-					</div>
-				</div>
 			</div>
 			<!-- /.container-fluid -->
 
