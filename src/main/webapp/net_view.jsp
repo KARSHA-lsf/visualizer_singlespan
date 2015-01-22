@@ -172,7 +172,7 @@ text {
 									<br />
 
 
-									<canvas id="graph_note" width="500" height="50"
+									<canvas id="graph_note" width="500" height="75"
 										style="float: right"> </canvas>
 
 									<script>				
@@ -185,7 +185,7 @@ text {
 							<div class="tab-pane fade" id="indegree">
 								<div id="borderIn" style="border: 2px solid;">
 									<br />
-									<canvas id="graph_note1" width="500" height="50"
+									<canvas id="graph_note1" width="500" height="75"
 										style="float: right"> </canvas>
 									&nbsp; Max Indegree:
 									<l id="max_indegree"></l>
@@ -224,7 +224,7 @@ text {
 									<br />
 
 
-									<canvas id="graph_note2" width="500" height="50"
+									<canvas id="graph_note2" width="500" height="75"
 										style="float: right"> </canvas>
 									&nbsp; Max Outdegree:
 									<l id="max_outdegree"></l>
@@ -257,7 +257,7 @@ text {
 								<div id="borderCmp" style="border: 2px solid;">
 									<br>
 
-									<canvas id="graph_note3" width="500" height="50"
+									<canvas id="graph_note3" width="500" height="75"
 										style="float: right"> </canvas>
 									<script type="text/javascript">
 							   			var ctx2 = document.getElementById("graph_note3").getContext("2d");					                            
@@ -287,7 +287,7 @@ text {
 									<br />
 
 
-									<canvas id="graph_note4" width="500" height="50"
+									<canvas id="graph_note4" width="500" height="75"
 										style="float: right"> </canvas>
 									<script type="text/javascript">
 							   			var ctx3 = document.getElementById("graph_note4").getContext("2d");					                            
@@ -317,7 +317,7 @@ text {
 									<br />
 
 
-									<canvas id="graph_note5" width="500" height="50"
+									<canvas id="graph_note5" width="500" height="75"
 										style="float: right"> </canvas>
 									<script type="text/javascript">
 							   			var ctx4 = document.getElementById("graph_note5").getContext("2d");					                            
@@ -403,7 +403,7 @@ text {
 									<br />
 
 
-									<canvas id="graph_note9" width="500" height="50"
+									<canvas id="graph_note9" width="500" height="75"
 										style="float: right"> </canvas>
 									<script type="text/javascript">
 							   			var ctx3 = document.getElementById("graph_note9").getContext("2d");					                            
