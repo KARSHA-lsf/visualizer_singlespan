@@ -94,8 +94,8 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
                         <li class="active"><a href="index.jsp"><i class="fa fa-fw fa-dashboard"></i> Karsha Visualizer</a></li>
-                       <li><a href="net_view.jsp?filename=daily.json&year=2005&Q=5"><i class="fa fa-fw fa-table"></i> Daily </a></li>           
-						<li><a href="net_view.jsp?filename=weekly.json&year=2005&Q=5"><i class="fa fa-fw fa-table"></i> Weekly </a></li>     
+                       <li><a href="net_view.jsp?filename=daily.json&year=2005&Q=5&type=Daily"><i class="fa fa-fw fa-table"></i> Daily </a></li>           
+						<li><a href="net_view.jsp?filename=weekly.json&year=2005&Q=5&type=Weekly"><i class="fa fa-fw fa-table"></i> Weekly </a></li>     
                         <li><a href="DataAnalysis.jsp"><i class="fa fa-fw fa-table"></i>Data-Analysis</a></li>
                         <li><a href=""><i class="fa fa-fw fa-file"></i>More About</a></li>
 
