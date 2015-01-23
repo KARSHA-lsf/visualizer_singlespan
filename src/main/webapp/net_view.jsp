@@ -408,7 +408,7 @@ text {
 										style="float: right"> </canvas>
 									<script type="text/javascript">
 							   			var ctx3 = document.getElementById("graph_note9").getContext("2d");					                            
-			                            SvgLoadIncTriad(ctx3);
+			                            SvgLoadChain(ctx3);
 			                            		
 			                            $("#Chain").click(function(){							   												   					
 						   					$.ajax({
