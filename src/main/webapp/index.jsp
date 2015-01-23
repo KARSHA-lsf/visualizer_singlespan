@@ -122,7 +122,8 @@
                             <p><strong>The Karsha GC Visualizer presents  Granger Causality(GC) based interaction patterns when comparing</br> the market volume of trades in US corporate bonds and US equities, grouped by NAICS industry sectors.</strong></p>
 
 
-                            <p>We provide the following analysis for each of the Annual and Quarterly GC-Network graphs:</p>
+                            <p>We provide the following analysis for  adjusted volume of industry pairs over the whole data set</br> 
+                                from 2005 to 2012 using Daily/Weekly granularity. </p>
                             <ul>
                                 <li>Network and nodes with the greatest indegree and outdegree.</li>
                                 <li>Immediate cycles.</li>
@@ -132,15 +133,7 @@
                                 <li>Long chains.</li>
                             </ul>
                             </br>
-                            <p>We provide the following temporal analysis:</p>
-                            <ul>
-                                <li>FALSE: Annual=FALSE and 4 quarters = FALSE.</li>
-                                <li>WEAK: Annual= TRUE but GC is FALSE in each of the 4 quarters.</li>
-                                <li>SUSTAINED: Annual=TRUE and 2 or more (preferably consecutive) quarters = TRUE.</li>
-                                <li>EPISODIC - Some quarter = TRUE but NOT SUSTAINED.</li>
-                            </ul>
-                            </br>
-                            <p>We provide the following charts for the Quarterly and Annual GC-Networks:</p>
+                            <p>We provide the following charts for the Daily and Weekly GC-Networks:</p>
                             <ul>
                                 <li>Cluster coefficient.</li>
                                 <li>Edge count.</li>
@@ -157,7 +150,8 @@
                                 <li>Match equities and bonds over the ticker and date.</li>
                                 <li>Discard unmatched data.</li>
                                 <li>Aggregate market volume (total value traded) daily for each equity and bond.</br> The average over the high and low daily prices for the equities are used to determine market volume.</li>
-                                <li>Aggregate equity and bond volumes separately by 2-digit NAICS industry sector code to create 22 * 2 portfolios.</br>  Then take the log of this volume.</li>
+                                <li>Aggregate equity and bond volumes separately by 2-digit NAICS industry sector code </br>
+                                    and divide the bond volumes to Bond-HighYield and Bond-InvGradeto create 22 * 3 portfolios.</br>  Then take the log of this volume.</li>
                             </ul>
                         </ul>
                     </div>
