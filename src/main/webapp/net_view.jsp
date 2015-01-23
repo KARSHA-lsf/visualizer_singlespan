@@ -88,8 +88,8 @@ select {
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			 <ul class="nav navbar-nav side-nav">
                         <li class="active"><a href="index.jsp"><i class="fa fa-fw fa-dashboard"></i> Karsha Visualizer</a></li>
-                        <li><a href="net_view.jsp?filename=daily.json&year=2005&Q=5&type=Daily"><i class="fa fa-fw fa-table"></i> Daily </a></li>           
-						<li><a href="net_view.jsp?filename=weekly.json&year=2005&Q=5&type=Weekly"><i class="fa fa-fw fa-table"></i> Weekly </a></li>     
+                        <li><a href="net_view.jsp?filename=daily.json&type=Daily"><i class="fa fa-fw fa-table"></i> Daily </a></li>           
+						<li><a href="net_view.jsp?filename=weekly.json&type=Weekly"><i class="fa fa-fw fa-table"></i> Weekly </a></li>     
                         <li><a href="DataAnalysis.jsp"><i class="fa fa-fw fa-table"></i>Data-Analysis</a></li>
                         <li><a href=""><i class="fa fa-fw fa-file"></i>More About</a></li>
 
@@ -98,7 +98,6 @@ select {
 		</nav>
 
 		<% 
-		String year = request.getParameter("year");	
 		String type = request.getParameter("type");
 	%>
 
@@ -196,7 +195,7 @@ text {
 											$("#In").click(function(){							   												   					
 							   					$.ajax({
 							   					  type: 'GET',
-							   					  url: "Indegree?Quater=<%=Integer.parseInt(request.getParameter("Q"))%>",
+							   					  url: "Indegree?Quater=5",
 							   					  dataType: 'json',
 							   					  success: function(data,status) {//data.Links,data.nodes	
 							   					  	document.getElementById("max_indegree").innerHTML = data.links.length;
@@ -236,7 +235,7 @@ text {
 											$("#Out").click(function(){							   												   					
 							   					$.ajax({
 							   					  type: 'GET',
-							   					  url: "Outdegree?Quater=<%=Integer.parseInt(request.getParameter("Q"))%>",
+							   					  url: "Outdegree?Quater=5",
 							   					  dataType: 'json',
 							   					  success: function(data,status) {//data.Links,data.nodes							   													   					 							   						    							   												   													   					
 							   						var width = 1000,height = 900;							   						
@@ -267,7 +266,7 @@ text {
 			                            $("#Cmp").click(function(){							   												   					
 						   					$.ajax({
 						   					  type: 'GET',
-						   					  url: "CompleteTriad?Quater=<%=Integer.parseInt(request.getParameter("Q"))%>",
+						   					  url: "CompleteTriad?Quater=5",
 						   					  dataType: 'json',
 						   					  success: function(data,status) {//data.Links,data.nodes							   													   					 							   						    							   												   													   					
 						   						var width = 1000,height = 900;							   						
@@ -297,7 +296,7 @@ text {
 			                            $("#Incmp").click(function(){							   												   					
 						   					$.ajax({
 						   					  type: 'GET',
-						   					  url: "IncompleteTriad?Quater=<%=Integer.parseInt(request.getParameter("Q"))%>",
+						   					  url: "IncompleteTriad?Quater=5",
 						   					  dataType: 'json',
 						   					  success: function(data,status) {//data.Links,data.nodes							   													   					 							   						    							   												   													   					
 						   						var width = 1000,height = 900;							   						
@@ -327,7 +326,7 @@ text {
 			                            $("#Imcycles").click(function(){							   												   					
 						   					$.ajax({
 						   					  type: 'GET',
-						   					  url: "ImmediateCycles?Quater=<%=Integer.parseInt(request.getParameter("Q"))%>",
+						   					  url: "ImmediateCycles?Quater=5",
 						   					  dataType: 'json',
 						   					  success: function(data,status) {//data.Links,data.nodes							   													   					 							   						    							   												   													   					
 						   						var width = 1000,height = 900;							   						
@@ -373,7 +372,7 @@ text {
 							   						QuarterGraph(nodes, file, "#borderQgraph", width, height,quart);
 							   						$.ajax({
 									   					  type: 'GET',
-									   					  url: "cc?Quater=<%=Integer.parseInt(request.getParameter("Q"))%>",
+									   					  url: "cc?Quater=5",
 									   					  dataType: 'json',
 									   					  success: function(data,status) {
 									   						var cc = document.getElementById("cc_show").innerHTML = data.Clustering_C;
@@ -413,7 +412,7 @@ text {
 			                            $("#Chain").click(function(){							   												   					
 						   					$.ajax({
 						   					  type: 'GET',
-						   					  url: "chain?Quater=<%=Integer.parseInt(request.getParameter("Q"))%>",
+						   					  url: "chain?Quater=5",
 						   					  dataType: 'json',
 						   					  success: function(data,status) {//data.Links,data.nodes							   													   					 							   						    							   												   													   					
 						   						var width = 1000,height = 900;							   						
@@ -478,7 +477,7 @@ text {
 								});
 								//graphload 
 								var width = 900, height = 950;
-								var quart = <%=Integer.parseInt(request.getParameter("Q"))%>;
+								var quart = 5;
 								
 								OriginalNetworkGraph(nodes, file, "#gc_network", width, height,quart);
 								</script>
@@ -502,9 +501,7 @@ text {
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery-ui.js"></script>
 		<script>
-		<% int a = Integer.parseInt(year)%2005;%>
-	$( "#accordion" ).accordion();
-	$( "#accordion" ).accordion({ active: <%=a%>});
+	
 	</script>
 	</div>
 </body>
