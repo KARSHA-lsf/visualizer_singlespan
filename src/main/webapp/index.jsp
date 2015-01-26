@@ -92,12 +92,26 @@
                     <a class="navbar-brand" href="index.jsp"><font color="white">Karsha Visualizer - 2005-2012 Whole Set GC Enhanced Daily/Weekly</font></a>
                 </div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav side-nav">
-                        <li class="active"><a href="index.jsp"><i class="fa fa-fw fa-dashboard"></i> Karsha Visualizer</a></li>
-                       <li><a href="net_view.jsp?filename=daily.json&type=Daily"><i class="fa fa-fw fa-table"></i> Daily </a></li>           
-						<li><a href="net_view.jsp?filename=weekly.json&type=Weekly"><i class="fa fa-fw fa-table"></i> Weekly </a></li>     
-                        <li><a href="DataAnalysis.jsp"><i class="fa fa-fw fa-table"></i>Data-Analysis</a></li>
-                        <li><a href=""><i class="fa fa-fw fa-file"></i>More About</a></li>
+                      <ul class="nav navbar-nav side-nav">
+                        <li><a href="index.jsp"><i
+                                    class="fa fa-fw fa-dashboard"></i> Karsha Visualizer</a>
+                            <ul id="accordion">
+                                
+                                <li>
+                                    <h3><a href="#">Network Visualization</a></h3>
+                                    <ul>
+                                        <li><a href="net_view.jsp?filename=daily.json&type=Daily"><i class="fa fa-fw fa-table"></i> Daily </a></li>
+                                        <li><a href="net_view.jsp?filename=weekly.json&type=Weekly"><i class="fa fa-fw fa-table"></i> Weekly </a></li>
+                                   </ul>
+                                </li>
+                               
+                            </ul>               
+
+                        </li>
+                        <li><a href="DataAnalysis.jsp"><!-- <i class="fa fa-fw fa-table"></i> -->
+                               Network Summary Statistics</a></li>
+                        <li><a href=""><i class="fa fa-fw fa-file"></i>
+                                More About</a></li>
 
                     </ul>
                  
