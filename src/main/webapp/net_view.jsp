@@ -22,6 +22,11 @@
 <script src="js/node.js"></script>
 <script src="js/app.js"></script>
 <script src="js/tracepaths.js"></script>
+<script type="text/javascript">
+$(function() {
+  $( "#accordion" ).accordion();
+});
+</script>
 
 <style type="text/css">
 .demoHeaders {
@@ -85,16 +90,92 @@ select {
 			<a class="navbar-brand" href="index.jsp">Visualizer - Karsha
 				project</a>
 		</div>
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			 <ul class="nav navbar-nav side-nav">
-                        <li class="active"><a href="index.jsp"><i class="fa fa-fw fa-dashboard"></i> Karsha Visualizer</a></li>
-                        <li><a href="net_view.jsp?filename=daily.json&type=Daily"><i class="fa fa-fw fa-table"></i> Daily </a></li>           
-						<li><a href="net_view.jsp?filename=weekly.json&type=Weekly"><i class="fa fa-fw fa-table"></i> Weekly </a></li>     
-                        <li><a href="DataAnalysis.jsp"><i class="fa fa-fw fa-table"></i>Data-Analysis</a></li>
-                        <li><a href=""><i class="fa fa-fw fa-file"></i>More About</a></li>
+		
+		 <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav side-nav">
+                        <li><a href="index.jsp"><i
+                                    class="fa fa-fw fa-dashboard"></i> Karsha Visualizer</a>
+                            <ul id="accordion">
+                                
+                                <li>
+                                    <h3><a href="#">Network Visualization</a></h3>
+                                    <ul>
+                                        <li><a href="net_view.jsp?filename=daily.json&type=Daily"><i class="fa fa-fw fa-table"></i> Daily </a></li>
+                                        <li><a href="net_view.jsp?filename=weekly.json&type=Weekly"><i class="fa fa-fw fa-table"></i> Weekly </a></li>
+                                   </ul>
+                                </li>
+                               
+                            </ul>               
+
+                        </li>
+                        <li><a href="DataAnalysis.jsp"><!-- <i class="fa fa-fw fa-table"></i> -->
+                               Network Summary Statistics</a></li>
+                        <li><a href=""><i class="fa fa-fw fa-file"></i>
+                                More About</a></li>
 
                     </ul>
-		</div>
+                 </div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- <div class="collapse navbar-collapse navbar-ex1-collapse">
+			 <ul class="nav navbar-nav side-nav">
+                        <li class="active"><a href="index.jsp"><i class="fa fa-fw fa-dashboard"></i> Karsha Visualizer</a></li>
+                        <ul id="accordion">
+                        <li>
+                           <h3><a href="net_view.jsp?filename=daily.json&type=Daily">Network Visualization</a></h3>
+                              <ul>
+                                 <li><a href="net_view.jsp?filename=daily.json&type=Daily"><i class="fa fa-fw fa-table"></i> Daily </a></li>
+                                 <li><a href="net_view.jsp?filename=weekly.json&type=Weekly"><i class="fa fa-fw fa-table"></i> Weekly </a></li>
+                               							
+                      	   	  </ul>
+						   </li>
+						   </ul>
+                        <li><a href="DataAnalysis.jsp"><i class="fa fa-fw fa-table"></i>Data-Analysis</a></li>
+                        <li><a href=""><i class="fa fa-fw fa-file"></i>More About</a></li>
+                        </ul>
+		</div> -->
 		</nav>
 
 		<% 
@@ -500,9 +581,7 @@ text {
 		<script src="js/plugins/morris/morris-data.js"></script>
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery-ui.js"></script>
-		<script>
-	
-	</script>
+		
 	</div>
 </body>
 
