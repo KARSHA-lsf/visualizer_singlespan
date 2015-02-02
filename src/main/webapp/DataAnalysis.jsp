@@ -179,7 +179,7 @@ select {
 					<div class="col-rg-6" style="border: 2px solid;">
 						<div id="edge_data1">
 							<center>
-								<h3>Edges Analysis</h3>
+								<h3>Edge Distribution</h3>
 							</center>
 							<script type="text/javascript">
 							edges_histogram("#edge_data1","csv/edges_overall_data.csv","Number of edges");

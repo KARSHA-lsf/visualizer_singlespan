@@ -75,7 +75,7 @@ select {
 }
 </style>
 </head>
-
+<% String baseUrl="\'"+request.getScheme() + "://" + request.getServerName() + ":" + Integer.toString(request.getServerPort()) + request.getContextPath()+"/"+"\'";%>
 
 <body style="background-color: white">
 	<div id="wrapper">
@@ -115,67 +115,6 @@ select {
 
                     </ul>
                  </div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<!-- <div class="collapse navbar-collapse navbar-ex1-collapse">
-			 <ul class="nav navbar-nav side-nav">
-                        <li class="active"><a href="index.jsp"><i class="fa fa-fw fa-dashboard"></i> Karsha Visualizer</a></li>
-                        <ul id="accordion">
-                        <li>
-                           <h3><a href="net_view.jsp?filename=daily.json&type=Daily">Network Visualization</a></h3>
-                              <ul>
-                                 <li><a href="net_view.jsp?filename=daily.json&type=Daily"><i class="fa fa-fw fa-table"></i> Daily </a></li>
-                                 <li><a href="net_view.jsp?filename=weekly.json&type=Weekly"><i class="fa fa-fw fa-table"></i> Weekly </a></li>
-                               							
-                      	   	  </ul>
-						   </li>
-						   </ul>
-                        <li><a href="DataAnalysis.jsp"><i class="fa fa-fw fa-table"></i>Data-Analysis</a></li>
-                        <li><a href=""><i class="fa fa-fw fa-file"></i>More About</a></li>
-                        </ul>
-		</div> -->
 		</nav>
 
 		<% 
@@ -273,10 +212,12 @@ text {
 									<script type="text/javascript">
 									   		var ctx = document.getElementById("graph_note1").getContext("2d");					                            
 				                            SvgLoadDegree(ctx);
-											$("#In").click(function(){							   												   					
+											$("#In").click(function(){	
+												var postfix ="Indegree?Quater=5";
+												var url = <%=baseUrl%>+postfix;
 							   					$.ajax({
 							   					  type: 'GET',
-							   					  url: "Indegree?Quater=5",
+							   					  url: url,
 							   					  dataType: 'json',
 							   					  success: function(data,status) {//data.Links,data.nodes	
 							   					  	document.getElementById("max_indegree").innerHTML = data.links.length;
@@ -313,10 +254,12 @@ text {
 									   		var ctx1 = document.getElementById("graph_note2").getContext("2d");					                            
 				                            SvgLoadDegree(ctx1);
 				                            
-											$("#Out").click(function(){							   												   					
+											$("#Out").click(function(){		
+												var postfix ="Outdegree?Quater=5";
+												var url = <%=baseUrl%>+postfix;
 							   					$.ajax({
 							   					  type: 'GET',
-							   					  url: "Outdegree?Quater=5",
+							   					  url: url,
 							   					  dataType: 'json',
 							   					  success: function(data,status) {//data.Links,data.nodes							   													   					 							   						    							   												   													   					
 							   						var width = 1000,height = 900;							   						
@@ -344,10 +287,12 @@ text {
 							   			var ctx2 = document.getElementById("graph_note3").getContext("2d");					                            
 			                            SvgLoadCompTriad(ctx2);
 			                            		
-			                            $("#Cmp").click(function(){							   												   					
+			                            $("#Cmp").click(function(){	
+			                            	var postfix ="CompleteTriad?Quater=5";
+											var url = <%=baseUrl%>+postfix;
 						   					$.ajax({
 						   					  type: 'GET',
-						   					  url: "CompleteTriad?Quater=5",
+						   					  url: url,
 						   					  dataType: 'json',
 						   					  success: function(data,status) {//data.Links,data.nodes							   													   					 							   						    							   												   													   					
 						   						var width = 1000,height = 900;							   						
@@ -374,10 +319,12 @@ text {
 							   			var ctx3 = document.getElementById("graph_note4").getContext("2d");					                            
 			                            SvgLoadIncTriad(ctx3);
 			                            		
-			                            $("#Incmp").click(function(){							   												   					
+			                            $("#Incmp").click(function(){	
+			                            	var postfix ="IncompleteTriad?Quater=5";
+											var url = <%=baseUrl%>+postfix;
 						   					$.ajax({
 						   					  type: 'GET',
-						   					  url: "IncompleteTriad?Quater=5",
+						   					  url: url,
 						   					  dataType: 'json',
 						   					  success: function(data,status) {//data.Links,data.nodes							   													   					 							   						    							   												   													   					
 						   						var width = 1000,height = 900;							   						
@@ -404,10 +351,12 @@ text {
 							   			var ctx4 = document.getElementById("graph_note5").getContext("2d");					                            
 			                            SvgLoad(ctx4);
 			                            		
-			                            $("#Imcycles").click(function(){							   												   					
+			                            $("#Imcycles").click(function(){
+			                            	var postfix ="ImmediateCycles?Quater=5";
+											var url = <%=baseUrl%>+postfix;
 						   					$.ajax({
 						   					  type: 'GET',
-						   					  url: "ImmediateCycles?Quater=5",
+						   					  url: url,
 						   					  dataType: 'json',
 						   					  success: function(data,status) {//data.Links,data.nodes							   													   					 							   						    							   												   													   					
 						   						var width = 1000,height = 900;							   						
@@ -490,10 +439,12 @@ text {
 							   			var ctx3 = document.getElementById("graph_note9").getContext("2d");					                            
 			                            SvgLoadChain(ctx3);
 			                            		
-			                            $("#Chain").click(function(){							   												   					
+			                            $("#Chain").click(function(){
+			                            	var postfix ="chain?Quater=5";
+											var url = <%=baseUrl%>+postfix;
 						   					$.ajax({
 						   					  type: 'GET',
-						   					  url: "chain?Quater=5",
+						   					  url: url,
 						   					  dataType: 'json',
 						   					  success: function(data,status) {//data.Links,data.nodes							   													   					 							   						    							   												   													   					
 						   						var width = 1000,height = 900;							   						
@@ -533,7 +484,7 @@ text {
 							$(document).ready(function(){
 								var filename =<%=name%>
 								
-								<% String baseUrl="\'"+request.getScheme() + "://" + request.getServerName() + ":" + Integer.toString(request.getServerPort()) + request.getContextPath()+"/"+"\'";%>
+								
 								var url=<%=baseUrl%>+filename;
 								
 								var obj=new Object();
@@ -581,7 +532,11 @@ text {
 		<script src="js/plugins/morris/morris-data.js"></script>
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery-ui.js"></script>
-		
+		<script type="text/javascript">
+		alert(history.length);
+		//window.history.pushState("object or string", "Title", "/visualizer/2005-2012/SINGLESPAN");
+		//window.history.back();
+		</script>
 	</div>
 </body>
 

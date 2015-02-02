@@ -316,7 +316,7 @@ function repeatCmpTriad(position,file){
 function edges_histogram(pos,file,axistxt) {
 	var margin = {top: 10, right: 10, bottom: 25, left: 40},
     width = 480 - margin.left - margin.right,
-    height = 200 - margin.top - margin.bottom;
+    height = 205 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, width-60], .1);
@@ -365,10 +365,10 @@ d3.csv(file, function(error, data) {
       .attr("class", "y axis")
       .call(yAxis)
     .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
+      //.attr("transform", "rotate(-90)")
+      .attr("y", -12)
       .attr("dy", ".71em")
-      .style("text-anchor", "end")
+     // .style("text-anchor", "end")
       .text(axistxt);
 
   var state = svg.selectAll(".state")
@@ -380,10 +380,11 @@ d3.csv(file, function(error, data) {
   state.selectAll("rect")
       .data(function(d) { return d.ages; })
     .enter().append("rect")
-      .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.y1); })
+      .attr("width", 70)
+      .attr("y", function(d) {return y(d.y1); })
       .attr("height", function(d) { return y(d.y0) - y(d.y1); })
       .style("fill", function(d) { return color(d.name); });
+
 
   var legend = svg.selectAll(".legend")
       .data(color.domain().slice().reverse())
