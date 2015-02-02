@@ -186,7 +186,7 @@ select {
 					<div class="col-rg-6" style="border: 2px solid;">
 						<div id="cc_data">
 							<center>
-								<h4>Clustering Coefficient Analysis</h4>
+								<h4>Clustering coefficient</h4>
 
 							</center>
 							<script type="text/javascript">
@@ -203,7 +203,7 @@ select {
 					<div class="col-lg-6">
 						<div id="com_triad_data">
 							<center>
-								<h4>Complete triad Analysis</h4>
+								<h4>Complete triad Count</h4>
 							</center>
 							<script type="text/javascript">
 								allData_histogram("#com_triad_data",
@@ -215,7 +215,7 @@ select {
 					<div class="col-rg-6">
 						<div id="Incom_triad_data" style="border: 2px solid;">
 							<center>
-								<h4>Incomplete triad Analysis</h4>
+								<h4>Incomplete triad Count</h4>
 							</center>
 							<script type="text/javascript">
 								allData_histogram("#Incom_triad_data",
