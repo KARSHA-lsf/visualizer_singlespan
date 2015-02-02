@@ -1,5 +1,5 @@
 State,Bond-HighYield,Bond-InvGrade,Equity
-Daily [GROUP BY causal],246,237,421
-Daily [GROUP BY effect],23,45,278
-Weekly [GROUP BY causal],133,176,157
-Weekly [GROUP BY effect] ,20,90,140
+Daily-causal,246,237,421
+Weekly- causal,133,176,157
+Daily- effect,365,349,190
+Weekly-effect ,106,61,299

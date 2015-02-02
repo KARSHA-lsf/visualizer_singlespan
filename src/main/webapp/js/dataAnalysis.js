@@ -316,7 +316,7 @@ function repeatCmpTriad(position,file){
 function edges_histogram(pos,file,axistxt) {
 	var margin = {top: 10, right: 10, bottom: 25, left: 40},
     width = 480 - margin.left - margin.right,
-    height = 205 - margin.top - margin.bottom;
+    height = 210 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, width-60], .1);
@@ -366,7 +366,7 @@ d3.csv(file, function(error, data) {
       .call(yAxis)
     .append("text")
       //.attr("transform", "rotate(-90)")
-      .attr("y", -12)
+      .attr("y", -10)
       .attr("dy", ".71em")
      // .style("text-anchor", "end")
       .text(axistxt);

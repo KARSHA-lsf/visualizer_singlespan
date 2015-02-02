@@ -266,7 +266,8 @@ text {
 							   						DrawDegree(data.nodes, data.links,"#borderOut",width,height);
 							   						document.getElementById("max_outdegree").innerHTML = data.links.length;							   						
 							   					  },
-							   					  error: function(data,error){alert(error);},
+							   					  error: function(data,error){//alert(error);
+							   					  },
 							   					  async: false
 							   					}); 							   					
 							   				});
@@ -299,7 +300,8 @@ text {
 						   						//DrawGraph(data.nodes, data.Links,"#borderCmp",width,height);							   						
 						   				DrawTrangleGraph(data.nodes, data.links,"#borderCmp",width,height);	 
                                          },
-						   					  error: function(data,error){alert(error);},
+						   					  error: function(data,error){//alert(error);
+						   					  },
 						   					  async: false
 						   					}); 							   					
 						   				});
@@ -331,7 +333,8 @@ text {
 						   						//DrawGraph(data.nodes, data.Links,"#borderIncmp",width,height);
                                                 DrawIncompleteTriad(data.nodes, data.links,"#borderIncmp",width,height);
 						   					  },
-						   					  error: function(data,error){alert(error);},
+						   					  error: function(data,error){//alert(error);
+						   					  },
 						   					  async: false
 						   					}); 							   					
 						   				});
@@ -362,7 +365,8 @@ text {
 						   						var width = 1000,height = 900;							   						
 						   						DrawGraph(data.nodes, data.links,"#borderImcycle",width,height);							   						
 						   					  },
-						   					  error: function(data,error){alert(error);},
+						   					  error: function(data,error){//alert(error);
+						   					  },
 						   					  async: false
 						   					}); 							   					
 						   				});
@@ -407,19 +411,20 @@ text {
 									   					  success: function(data,status) {
 									   						var cc = document.getElementById("cc_show").innerHTML = data.Clustering_C;
 									   					  },
-									   					  error: function(data,error){alert(error);},
+									   					  error: function(data,error){//alert(error);
+									   					  },
 									   					  async: false
 									   					}); 								   													   			
 								   				});
 							   					
 							   					$("#Sustained").click(function(){
-							   						alert("sustained");
+							   						//alert("sustained");
 							   					});
 							   					$("#Episodic").click(function(){
-							   						alert("episodic");
+							   						//alert("episodic");
 							   					});
 							   					$("#Weak").click(function(){
-							   						alert("weak");
+							   						//alert("weak");
 							   					});
 							   				</script>
 
@@ -452,7 +457,8 @@ text {
                                                 //DrawChain(data.nodes, data.links,"#borderChain",width,height);
                                                 LongerChainInQuarterData(data.nodes, data.links,"#borderChain",width,height);
 						   					  },
-						   					  error: function(data,error){alert(error);},
+						   					  error: function(data,error){//alert(error);
+						   					  },
 						   					  async: false
 						   					}); 							   					
 						   				});
@@ -495,7 +501,8 @@ text {
 									url: url,
 									dataType: 'json',
 									success: function(data) { obj.link = data;},
-									error: function(data,error){alert(error);},
+									error: function(data,error){//alert(error);
+									},
 									async: false
 								}); 
 										
@@ -533,7 +540,7 @@ text {
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery-ui.js"></script>
 		<script type="text/javascript">
-		alert(history.length);
+		
 		//window.history.pushState("object or string", "Title", "/visualizer/2005-2012/SINGLESPAN");
 		//window.history.back();
 		</script>
