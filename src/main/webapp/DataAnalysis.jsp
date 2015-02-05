@@ -94,14 +94,14 @@ select {
 }
 
 .dot {
-  stroke: #000;
+	stroke: #000;
 }
 
 .tooltip {
-  position: absolute;
-  width: 200px;
-  height: 28px;
-  pointer-events: none;
+	position: absolute;
+	width: 200px;
+	height: 28px;
+	pointer-events: none;
 }
 </style>
 </head>
@@ -120,28 +120,32 @@ select {
 						Visualizer - Karsha project</font></a>
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				  <ul class="nav navbar-nav side-nav">
-                        <li><a href="index.jsp"><i
-                                    class="fa fa-fw fa-dashboard"></i> Karsha Visualizer</a>
-                            <ul id="accordion">
-                                
-                                <li>
-                                    <h3><a href="#">Network Visualization</a></h3>
-                                    <ul>
-                                        <li><a href="net_view.jsp?filename=daily.json&type=Daily"><i class="fa fa-fw fa-table"></i> Daily </a></li>
-                                        <li><a href="net_view.jsp?filename=weekly.json&type=Weekly"><i class="fa fa-fw fa-table"></i> Weekly </a></li>
-                                   </ul>
-                                </li>
-                               
-                            </ul>               
+				<ul class="nav navbar-nav side-nav">
+					<li><a href="index.jsp"><i class="fa fa-fw fa-dashboard"></i>
+							Karsha Visualizer</a>
+						<ul id="accordion">
 
-                        </li>
-                        <li><a href="DataAnalysis.jsp"><!-- <i class="fa fa-fw fa-table"></i> -->
-                                Network Summary Statistics</a></li>
-                        <li><a href=""><i class="fa fa-fw fa-file"></i>
-                                More About</a></li>
+							<li>
+								<h3>
+									<a href="#">Network Visualization</a>
+								</h3>
+								<ul>
+									<li><a href="net_view.jsp?filename=daily.json&type=Daily"><i
+											class="fa fa-fw fa-table"></i> Daily </a></li>
+									<li><a
+										href="net_view.jsp?filename=weekly.json&type=Weekly"><i
+											class="fa fa-fw fa-table"></i> Weekly </a></li>
+								</ul>
+							</li>
 
-                    </ul>
+						</ul></li>
+					<li><a href="DataAnalysis.jsp">
+							<!-- <i class="fa fa-fw fa-table"></i> --> Network Summary
+							Statistics
+					</a></li>
+					<li><a href=""><i class="fa fa-fw fa-file"></i> More About</a></li>
+
+				</ul>
 			</div>
 		</nav>
 
@@ -164,49 +168,59 @@ select {
 				<!-- /.row -->
 
 				<div class="row">
-					
-						<div class="col-lg-6" style="border: 2px solid;">
-						<div id="cc_data" >
+
+					<div class="col-lg-6">
+
+						<div id="edge_data1">
 							<center>
-								<h3>Clustering Coefficient Analysis</h3>
+								<h4>Edge Distribution</h4>
+							</center>
+							<script type="text/javascript">
+								edges_histogram("#edge_data1",
+										"csv/edges_overall_data.csv",
+										"Number of edges");
+							</script>
+						</div>
+
+					</div>
+					<div class="col-rg-6" style="border: 2px solid;">
+						<div id="cc_data">
+							<center>
+								<h4>Clustering coefficient</h4>
+
 							</center>
 							<script type="text/javascript">
 								allData_histogram("#cc_data",
-										"csv/cc_overall_data.csv","Clustering Coefficient");
+										"csv/cc_overall_data.csv",
+										"Clustering Coefficient");
 							</script>
 						</div>
 					</div>
-					<div class="col-rg-6" style="border: 2px solid;">
-						<div id="edge_data1">
-							<center>
-								<h3>Edges Analysis</h3>
-							</center>
-							<script type="text/javascript">
-							edges_histogram("#edge_data1","csv/edges_overall_data.csv","Number of edges");
-							</script>
-						</div>
-					</div>					
 				</div>
-				
+
 				<br></br>
 				<div class="row">
 					<div class="col-lg-6">
-						<div id="com_triad_data" >
+						<div id="com_triad_data">
 							<center>
-								<h3>Complete triad Analysis</h3>
+								<h4>Complete triad Count</h4>
 							</center>
 							<script type="text/javascript">
-								allData_histogram("#com_triad_data","csv/comTraid_overall_data.csv","Number of Complete triads");
+								allData_histogram("#com_triad_data",
+										"csv/comTraid_overall_data.csv",
+										"Number of Complete triads");
 							</script>
 						</div>
 					</div>
 					<div class="col-rg-6">
 						<div id="Incom_triad_data" style="border: 2px solid;">
 							<center>
-								<h3>Incomplete triad Analysis</h3>
+								<h4>Incomplete triad Count</h4>
 							</center>
 							<script type="text/javascript">
-								allData_histogram("#Incom_triad_data","csv/IncomTraid_overall_data.csv","Number of Incomplete triads");
+								allData_histogram("#Incom_triad_data",
+										"csv/IncomTraid_overall_data.csv",
+										"Number of Incomplete triads");
 							</script>
 						</div>
 					</div>
