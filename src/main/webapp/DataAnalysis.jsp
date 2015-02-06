@@ -156,7 +156,7 @@ select {
 				<!-- Page Heading -->
 				<div class="row">
 					<div class="col-lg-12">
-						<h1 class="page-header">Data-Analysis</h1>
+						<h1 class="page-header">Network Summary Statistics</h1>
 						<ol class="breadcrumb">
 							<li><i class="fa fa-dashboard"></i> <a href="index.jsp">Visualizer</a>
 							</li>
@@ -186,7 +186,7 @@ select {
 					<div class="col-rg-6" style="border: 2px solid;">
 						<div id="cc_data">
 							<center>
-								<h4>Clustering coefficient</h4>
+								<h4>Clustering Coefficient</h4>
 
 							</center>
 							<script type="text/javascript">
@@ -203,7 +203,7 @@ select {
 					<div class="col-lg-6">
 						<div id="com_triad_data">
 							<center>
-								<h4>Complete triad Count</h4>
+								<h4>Complete Triad Count</h4>
 							</center>
 							<script type="text/javascript">
 								allData_histogram("#com_triad_data",
@@ -215,7 +215,7 @@ select {
 					<div class="col-rg-6">
 						<div id="Incom_triad_data" style="border: 2px solid;">
 							<center>
-								<h4>Incomplete triad Count</h4>
+								<h4>Incomplete Triad Count</h4>
 							</center>
 							<script type="text/javascript">
 								allData_histogram("#Incom_triad_data",

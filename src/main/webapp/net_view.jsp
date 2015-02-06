@@ -164,7 +164,7 @@ text {
 					<div class="col-lg-12">
 						<h2>
 							<center>
-								2005-2012 Whole Set Granger Causality Enhanced <%=type %>
+								2005-2012 Whole Set Granger Causality - Granularity <%=type %>
 							</center>
 						</h2>
 
